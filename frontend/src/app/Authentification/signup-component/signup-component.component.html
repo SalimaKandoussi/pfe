@@ -1,0 +1,40 @@
+<div *ngIf="isLoading">Chargement...</div>
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+<div class="signup-container">
+  <h2>Inscription</h2>
+  <form *ngIf="!showInterestForm" (ngSubmit)="signup()">
+    <label for="username">Nom d'utilisateur</label><br>
+    <input type="text" id="username" [(ngModel)]="user.username" name="username" required /><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" [(ngModel)]="user.email" name="email" required /><br>
+
+    <label for="password">Mot de passe</label><br>
+    <input type="password" id="password" [(ngModel)]="user.password" name="password" required /><br>
+
+    <label for="type">Type d'utilisateur :</label><br>
+    <select [(ngModel)]="user.type" name="type" required>
+      <option value="client">Client</option>
+      <option value="recruteur">Recruteur</option>
+    </select><br>
+
+    <button type="submit">S'inscrire</button>
+  </form>
+
+  <div *ngIf="showInterestForm">
+    <h3>Veuillez remplir les informations suivantes :</h3>
+    <form (ngSubmit)="submitInterestForm()">
+      <label>Domaine d'intérêt 1 :</label><br>
+      <input type="text" [(ngModel)]="user.interests[0]" name="interest1" required /><br>
+
+      <label>Domaine d'intérêt 2 :</label><br>
+      <input type="text" [(ngModel)]="user.interests[1]" name="interest2" required /><br>
+
+      <label>Domaine d'intérêt 3 :</label><br>
+      <input type="text" [(ngModel)]="user.interests[2]" name="interest3" required /><br>
+
+      <button type="submit">Soumettre</button>
+    </form>
+  </div>
+</div>

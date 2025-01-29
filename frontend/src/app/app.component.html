@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Brand</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="#" routerLinkActive="active" ariaCurrentWhenActive="page">À propos de nous</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#" routerLinkActive="active" ariaCurrentWhenActive="page">Nos services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page">se connecter </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active" ariaCurrentWhenActive="page">S'enregistrer</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenu spécifique à chaque route -->
+<router-outlet></router-outlet>

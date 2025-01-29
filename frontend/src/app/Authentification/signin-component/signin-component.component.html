@@ -1,0 +1,6 @@
+<form (submit)="signin()">
+    <input [(ngModel)]="credentials.email" placeholder="Email" name="email" required />
+    <input [(ngModel)]="credentials.password" type="password" placeholder="Mot de passe" name="password" required />
+    <button type="submit">Se connecter</button>
+  </form>
+  

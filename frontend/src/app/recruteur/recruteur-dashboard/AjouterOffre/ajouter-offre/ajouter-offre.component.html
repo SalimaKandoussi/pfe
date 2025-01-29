@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Ajouter une offre d'emploi</h2>
+    <form (ngSubmit)="ajouterOffre()">
+      <div class="mb-3">
+        <label for="region" class="form-label">Région</label>
+        <select 
+          id="region" 
+          class="form-select" 
+          [(ngModel)]="offre.region" 
+          name="region" 
+          required>
+          <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="ville" class="form-label">Ville</label>
+        <input 
+          type="text" 
+          id="ville" 
+          class="form-control" 
+          [(ngModel)]="offre.ville" 
+          name="ville" 
+          placeholder="Entrez la ville" 
+          required />
+      </div>
+      <div class="mb-3">
+        <label for="domaine" class="form-label">Domaine</label>
+        <input 
+          type="text" 
+          id="domaine" 
+          class="form-control" 
+          [(ngModel)]="offre.domaine" 
+          name="domaine" 
+          placeholder="Entrez le domaine" 
+          required />
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Ajouter l'offre</button>
+    </form>
+  </div>
+  
